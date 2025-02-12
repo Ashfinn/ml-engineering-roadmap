@@ -59,14 +59,10 @@ type Phase = {
   };
 };
 
-type ProgressRecord = {
-  [key: string]: number;
-};
-
 const MLDashboard = () => {
   const [selectedPhase, setSelectedPhase] = useState(1);
   const [activeMonth, setActiveMonth] = useState(1);
-  const [progress] = useState({
+  const [progress] = useState<Record<string, number>>({
     // Initialize with some sample progress data
     "1-1-2": 75,
     "1-3-4": 45,
