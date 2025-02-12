@@ -1,10 +1,9 @@
-import Image from "next/image";
-import Dashboard from "../components/ui/Dashboard";
+import MLDashboard from "@/components/ui/Dashboard";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="min-h-screen p-4">
-      <Dashboard />
+    <main>
+      <MLDashboard />
     </main>
   );
 }
