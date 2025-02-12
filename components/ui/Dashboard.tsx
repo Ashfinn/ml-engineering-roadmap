@@ -16,7 +16,13 @@ import {
 const MLDashboard = () => {
   const [selectedPhase, setSelectedPhase] = useState(1);
   const [activeMonth, setActiveMonth] = useState(1);
-  const [progress, setProgress] = useState({});
+  const [progress] = useState({
+    // Initialize with some sample progress data
+    "1-1-2": 75,
+    "1-3-4": 45,
+    "1-5-6": 20,
+    "2-7-8": 0
+  });
 
   // Rest of the component remains the same...
   const phases = [
