@@ -1,27 +1,24 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { 
-  BookOpen, Code, Brain, Rocket, Youtube,
-  CheckCircle2, Circle, Calendar, Library,
-  Timer, Target, Star, Video, Pencil,
-  ArrowRight, ChevronDown, ChevronUp, 
-  PlayCircle, GraduationCap, Layout,
-  FileCode, GitBranch, Database, ChartBar
+  Code, Brain, Rocket, Youtube,
+  Calendar, Library,
+  Target, Layout,
+  ChartBar, BookOpen
 } from 'lucide-react';
 
 const MLDashboard = () => {
   const [selectedPhase, setSelectedPhase] = useState(1);
   const [activeMonth, setActiveMonth] = useState(1);
   const [progress, setProgress] = useState({});
-  const [showResources, setShowResources] = useState(false);
 
-  // Actual roadmap content from the document
+  // Rest of the component remains the same...
   const phases = [
     {
       id: 1,
