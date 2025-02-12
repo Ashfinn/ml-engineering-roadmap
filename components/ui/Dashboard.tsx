@@ -13,6 +13,56 @@ import {
   ChartBar, BookOpen
 } from 'lucide-react';
 
+// Define types for our data structures
+type Skill = {
+  name: string;
+  topics: string[];
+};
+
+type Project = {
+  name: string;
+  details: string;
+  complexity: 'Advanced' | 'Intermediate';
+};
+
+type Resource = {
+  type: string;
+  name: string;
+  author?: string;
+  category?: string;
+};
+
+type Video = {
+  title: string;
+  duration: string;
+  platform?: string;
+  author?: string;
+};
+
+type MonthData = {
+  title: string;
+  skills: Skill[];
+  projects?: Project[];
+  resources?: Resource[];
+  videos?: Video[];
+};
+
+type Phase = {
+  id: number;
+  title: string;
+  duration: string;
+  focus: string;
+  color: string;
+  icon: React.ReactNode;
+  months: {
+    [key: string]: MonthData;
+  };
+};
+
+type ProgressRecord = {
+  [key: string]: number;
+};
+
 const MLDashboard = () => {
   const [selectedPhase, setSelectedPhase] = useState(1);
   const [activeMonth, setActiveMonth] = useState(1);
@@ -140,12 +190,12 @@ const MLDashboard = () => {
     }
   ];
 
-  const calculateProgress = (phaseId, monthRange) => {
+  const calculateProgress = (phaseId: number, monthRange: string): number => {
     const key = `${phaseId}-${monthRange}`;
     return progress[key] || 0;
   };
 
-  const renderMonth = (phase, monthRange) => {
+  const renderMonth = (phase: Phase, monthRange: string) => {
     const monthData = phase.months[monthRange];
     if (!monthData) return null;
 
