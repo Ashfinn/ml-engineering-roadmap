@@ -94,6 +94,11 @@ const MLDashboard = () => {
               id: "s2",
               name: "SQL Proficiency", 
               topics: ["Complex Queries", "Database Design"] 
+            },
+            { 
+              id: "s3",
+              name: "Version Control", 
+              topics: ["Git", "GitHub Portfolio"] 
             }
           ],
           projects: [
@@ -102,6 +107,12 @@ const MLDashboard = () => {
               name: "Task Management System",
               details: "Build database with users, projects, tasks tables",
               complexity: "Advanced"
+            },
+            {
+              id: "p2",
+              name: "Kaggle Titanic",
+              details: "Aim for top percentile score",
+              complexity: "Intermediate"
             }
           ],
           resources: [
@@ -110,13 +121,209 @@ const MLDashboard = () => {
               type: "Book",
               name: "Python for Data Analysis",
               author: "Wes McKinney"
+            },
+            {
+              id: "r2",
+              type: "Platform",
+              name: "SQLZoo",
+              category: "Interactive Learning"
+            }
+          ]
+        },
+        "3-4": {
+          title: "Mathematics & Statistics",
+          skills: [
+            { 
+              id: "s4",
+              name: "Linear Algebra", 
+              topics: ["Matrices", "Vectors", "Eigenvalues"] 
+            },
+            { 
+              id: "s5",
+              name: "Probability", 
+              topics: ["Bayesian Stats", "Distributions"] 
+            },
+            { 
+              id: "s6",
+              name: "Calculus", 
+              topics: ["Derivatives", "Backpropagation"] 
+            }
+          ],
+          projects: [
+            {
+              id: "p3",
+              name: "Implementation Series",
+              details: "Build logistic regression, linear regression from scratch",
+              complexity: "Advanced"
+            }
+          ],
+          videos: [
+            {
+              id: "v1",
+              title: "Backpropagation Explained",
+              duration: "12:47",
+              platform: "3Blue1Brown"
+            },
+            {
+              id: "v2",
+              title: "Neural Networks from Scratch",
+              duration: "31:28",
+              author: "Samson Zhang"
+            }
+          ]
+        },
+        "5-6": {
+          title: "ML Fundamentals",
+          skills: [
+            { 
+              id: "s7",
+              name: "Algorithms", 
+              topics: ["Decision Trees", "SVMs", "k-means"] 
+            },
+            { 
+              id: "s8",
+              name: "Model Evaluation", 
+              topics: ["Cross-validation", "Metrics"] 
+            }
+          ],
+          projects: [
+            {
+              id: "p4",
+              name: "Kaggle Competition",
+              details: "Aim for top 25% in Getting Started competition",
+              complexity: "Advanced"
+            }
+          ],
+          resources: [
+            {
+              id: "r3",
+              type: "Course",
+              name: "Machine Learning Specialization",
+              author: "Andrew Ng",
+              category: "Online Course"
             }
           ]
         }
-        // ... other months data
+      }
+    },
+    {
+      id: 2,
+      title: "Deep Learning & Research",
+      duration: "Months 7-12",
+      focus: "40% DL, 40% research, 20% systems",
+      color: "from-purple-500 to-pink-500",
+      icon: <Brain className="w-6 h-6" />,
+      months: {
+        "7-8": {
+          title: "Deep Learning Foundations",
+          skills: [
+            { 
+              id: "s9",
+              name: "PyTorch", 
+              topics: ["Tensors", "Autograd", "Neural Nets"] 
+            },
+            { 
+              id: "s10",
+              name: "Architectures", 
+              topics: ["CNNs", "RNNs", "Transformers"] 
+            }
+          ],
+          projects: [
+            {
+              id: "p5",
+              name: "Image Classification",
+              details: "Build and train a CNN for CIFAR-10",
+              complexity: "Advanced"
+            }
+          ],
+          videos: [
+            {
+              id: "v3",
+              title: "Neural Networks Explained",
+              duration: "18:40",
+              platform: "3Blue1Brown"
+            },
+            {
+              id: "v4",
+              title: "Let's build GPT",
+              duration: "1:56:20",
+              author: "Andrej Karpathy"
+            }
+          ],
+          resources: [
+            {
+              id: "r4",
+              type: "Book",
+              name: "Deep Learning with PyTorch",
+              author: "Eli Stevens",
+              category: "Technical Book"
+            }
+          ]
+        },
+        "9-10": {
+          title: "Advanced Topics & Research",
+          skills: [
+            { 
+              id: "s11",
+              name: "Research Skills", 
+              topics: ["Paper Reading", "Experimentation", "Ablation Studies"] 
+            },
+            { 
+              id: "s12",
+              name: "Advanced DL", 
+              topics: ["Attention", "Self-Supervision", "Diffusion Models"] 
+            }
+          ],
+          projects: [
+            {
+              id: "p6",
+              name: "Research Paper Implementation",
+              details: "Implement a recent paper from top conferences",
+              complexity: "Advanced"
+            }
+          ],
+          resources: [
+            {
+              id: "r5",
+              type: "Platform",
+              name: "Papers with Code",
+              category: "Research Resource"
+            }
+          ]
+        },
+        "11-12": {
+          title: "Systems & Deployment",
+          skills: [
+            { 
+              id: "s13",
+              name: "ML Systems", 
+              topics: ["Model Serving", "Scaling", "MLOps"] 
+            },
+            { 
+              id: "s14",
+              name: "Production ML", 
+              topics: ["Monitoring", "A/B Testing", "CI/CD"] 
+            }
+          ],
+          projects: [
+            {
+              id: "p7",
+              name: "End-to-End ML System",
+              details: "Deploy a model with monitoring and CI/CD",
+              complexity: "Advanced"
+            }
+          ],
+          resources: [
+            {
+              id: "r6",
+              type: "Course",
+              name: "Full Stack Deep Learning",
+              category: "Online Course"
+            }
+          ]
+        }
       }
     }
-    // ... other phases
   ];
 
   // Calculate progress for items in the current view
