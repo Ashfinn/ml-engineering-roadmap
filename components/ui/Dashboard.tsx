@@ -385,7 +385,7 @@ const MLDashboard = () => {
                 className={`flex items-center gap-2 ${
                   String(activeMonth) === monthRange ? 'bg-blue-500 text-white' : ''
                 }`}
-                onClick={() => setActiveMonth(String(monthRange))}
+                onClick={() => setActiveMonth(Number(monthRange))}
               >
                 <Calendar className="w-4 h-4" />
                 Months {monthRange}
