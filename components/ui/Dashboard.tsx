@@ -381,11 +381,11 @@ const MLDashboard = () => {
             {Object.keys(phases[selectedPhase - 1].months).map((monthRange) => (
               <Button
                 key={monthRange}
-                variant={activeMonth === monthRange ? "default" : "outline"}
+                variant={String(activeMonth) === monthRange ? "default" : "outline"}
                 className={`flex items-center gap-2 ${
-                  activeMonth === monthRange ? 'bg-blue-500 text-white' : ''
+                  String(activeMonth) === monthRange ? 'bg-blue-500 text-white' : ''
                 }`}
-                onClick={() => setActiveMonth(monthRange)}
+                onClick={() => setActiveMonth(String(monthRange))}
               >
                 <Calendar className="w-4 h-4" />
                 Months {monthRange}
